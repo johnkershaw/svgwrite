@@ -95,9 +95,9 @@ def iterflatlist(values):
             yield element
 
 
-def strlist(values, seperator=","):
+def strlist(values, sep=","):
     """
-    Concatenate **values** with **sepertator**, `None` values will be excluded.
+    Concatenate **values** with **sep**, `None` values will be excluded.
 
     :param values: `iterable` object
     :returns: `string`
@@ -106,7 +106,7 @@ def strlist(values, seperator=","):
     if is_string(values):
         return values
     else:
-        return seperator.join([str(value) for value in iterflatlist(values) if value is not None])
+        return sep.join([str(value) for value in iterflatlist(values) if value is not None])
 
 
 def get_unit(coordinate):
